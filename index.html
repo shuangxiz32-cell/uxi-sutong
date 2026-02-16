@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>U嘻速通</title>
+<style>
+body{font-family:Arial;background:#f5f5f5;margin:0;padding:20px;text-align:center;}
+.item{background:white;padding:18px;margin:10px 0;border-radius:12px;border:1px solid #ddd;font-size:16px;}
+#qrcode{margin-top:20px;display:none;}
+#qrcode img{max-width:280px;width:100%;border-radius:12px;}
+</style>
+</head>
+<body>
+
+<h1>U嘻速通</h1>
+
+<div class="item" onclick="show(1)">660UC — 54元</div>
+<div class="item" onclick="show(2)">1800UC — 130元</div>
+<div class="item" onclick="show(3)">3850UC — 260元</div>
+<div class="item" onclick="show(4)">8100UC — 500元</div>
+
+<div id="qrcode"></div>
+
+<script>
+// 54元收款码路径
+let path1 = "/storage/emulated/0/Pictures/WeiXin/mm_facetoface_collect_qrcode_1771221853205.png";
+// 130元收款码路径
+let path2 = "/storage/emulated/0/Pictures/WeiXin/mm_facetoface_collect_qrcode_1771221904720.png";
+// 260元收款码路径
+let path3 = "/storage/emulated/0/Pictures/WeiXin/mm_facetoface_collect_qrcode_1771221917973.png";
+// 500元收款码路径
+let path4 = "/storage/emulated/0/Pictures/WeiXin/mm_facetoface_collect_qrcode_1771221930021.png";
+
+function show(i){
+  if(i === 1) document.getElementById('qrcode').innerHTML='<img src="'+path1+'">';
+  if(i === 2) document.getElementById('qrcode').innerHTML='<img src="'+path2+'">';
+  if(i === 3) document.getElementById('qrcode').innerHTML='<img src="'+path3+'">';
+  if(i === 4) document.getElementById('qrcode').innerHTML='<img src="'+path4+'">';
+  
+  document.getElementById('qrcode').style.display='block';
+}
+</script>
+
+</body>
+</html>
